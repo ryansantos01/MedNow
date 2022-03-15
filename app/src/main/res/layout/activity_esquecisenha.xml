@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_telaprincipal"
+    android:layout_gravity="center"
+    tools:context=".enfermeiro.EsquecisenhaActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_triangulo_esquerdo"
+        android:rotation="180"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nestedScrollView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/containerretangulo"
+                    android:layout_width="350dp"
+                    android:layout_height="450dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/background_retangulo" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/recuperarsenha"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/containerretangulo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Recuperar a senha"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/texto"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recuperarsenha"
+                    android:layout_alignStart="@+id/containerretangulo"
+                    android:layout_alignEnd="@+id/containerretangulo"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="Olá, esqueceu sua senha? Por favor, insira seu email corretamente no campo abaixo, que poderá cadastrar uma nova senha."
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/texto"
+                    android:layout_alignStart="@+id/containerretangulo"
+                    android:layout_alignEnd="@+id/containerretangulo"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColorHint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputEditTextEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_caixa"
+                        android:hint="@string/hint_email"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/appCompatButtonConfirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textInputLayoutEmail"
+                    android:layout_alignStart="@+id/containerretangulo"
+                    android:layout_alignEnd="@+id/containerretangulo"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="100dp"
+                    android:background="@drawable/background_botao"
+                    android:text="Enviar"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Medicamento_Activity"
+    android:background="@drawable/background_telaprincipal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<TextView
+    android:id="@+id/textoMednow"
+    android:textColor="@color/white"
+    android:text="MED NOW"
+    android:textSize="50sp"
+    app:layout_constraintTop_toTopOf="parent"
+    android:textStyle="bold"
+    android:layout_marginTop="32dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/textocadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Cadastro"
+            android:textColor="@color/Cor_Cadastro"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textoMednow" />
+    <TextView
+        android:id="@+id/textoidentificacaopessoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Identificação Pessoal"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/textocadastro"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/textonomepaciente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOME PACIENTE"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/textoidentificacaopessoal"
+        app:layout_constraintTop_toBottomOf="@id/textoidentificacaopessoal"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/caixamednomepaciente"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toBottomOf="@id/textonomepaciente"
+        app:layout_constraintLeft_toLeftOf="@id/textonomepaciente"
+        app:layout_constraintRight_toRightOf="parent"
+        android:hint="ex: Carla"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint"
+        android:paddingStart="12dp"
+        android:paddingEnd="0dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/background_caixa"
+        android:ems="10"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:id="@+id/textonomemedicamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/caixamednomepaciente"
+        android:layout_marginTop="5dp"
+        android:text="NOME MEDICAMENTO:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/textonomepaciente"/>
+    <EditText
+        android:id="@+id/caixamednomemedicamento"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toBottomOf="@id/textonomemedicamento"
+        app:layout_constraintLeft_toLeftOf="@id/textonomepaciente"
+        app:layout_constraintRight_toRightOf="parent"
+        android:hint="ex: Aspirina"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint"
+        android:paddingStart="12dp"
+        android:paddingEnd="0dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/background_caixa"
+        android:ems="10"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+        android:id="@+id/textodatavalidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="DATA DE VALIDADE"
+        app:layout_constraintLeft_toLeftOf="@id/textonomemedicamento"
+        app:layout_constraintTop_toBottomOf="@id/caixamednomemedicamento"
+        android:layout_marginTop="5dp"
+        />
+    <EditText
+        android:id="@+id/etValidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="XX/XX/XXXX"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textodatavalidade"
+        android:layout_marginTop="20dp"
+        android:inputType="number"/>
+    <TextView
+        android:id="@+id/textodescricaomedicamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/textodatavalidade"
+        app:layout_constraintTop_toBottomOf="@id/etValidade"
+        android:text="DESCRIÇÃO MEDICAMENTO"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/caixameddescricaomedicamento"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:paddingStart="12dp"
+        android:textColor="@color/black"
+        android:paddingEnd="0dp"
+        android:background="@drawable/background_caixa"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/textodescricaomedicamento"
+        app:layout_constraintTop_toBottomOf="@id/textodescricaomedicamento"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"/>
+    <LinearLayout
+        android:id="@+id/LinearLayoutqnttotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/caixameddescricaomedicamento"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <TextView
+        android:id="@+id/textoqnttotalmedicamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QTD. TOTAL NA EMBALAGEM"
+        android:textColor="@color/white"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp"/>
+<EditText
+android:id="@+id/caixamedqnttotalmedicamento"
+android:layout_width="wrap_content"
+android:layout_height="48dp"
+android:textColor="@color/black"
+android:background="@drawable/background_caixa"
+android:layout_marginLeft="20dp"
+android:paddingStart="12dp"
+android:paddingEnd="0dp"
+android:ems="12"
+android:maxLength="5"
+ android:inputType="number"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <TextView
+        android:id="@+id/textounidadetotalmedicamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="UNIDADE        "
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+            <Spinner
+                android:id="@+id/spinnerunidadetotal"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/white"
+                android:popupBackground="@drawable/background_interno_spinner"
+                />
+    </LinearLayout>
+    </LinearLayout>
+<TextView
+    android:id="@+id/textolocaldeaplicacao"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/LinearLayoutqnttotal"
+    android:textSize="20sp"
+    android:textColor="@color/white"
+    android:text="TIPO/LOCAL DE APLICAÇÃO"
+    app:layout_constraintLeft_toLeftOf="@id/textodescricaomedicamento"
+    android:layout_marginTop="10dp"/>
+<Spinner
+    android:id="@+id/spinnerlocaldeaplicacao"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textolocaldeaplicacao"
+    android:layout_marginTop="10dp"
+    android:popupBackground="@drawable/background_interno_spinner"
+    android:backgroundTint="@color/white"
+    android:layout_marginLeft="20dp"
+   />
+        <TextView
+            android:id="@+id/textoembalagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/textolocaldeaplicacao"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="TIPO DA EMBALAGEM"
+            app:layout_constraintTop_toBottomOf="@id/spinnerlocaldeaplicacao"
+            android:layout_marginTop="10dp"/>
+<Spinner
+    android:id="@+id/spinnerembalagemmedicamento"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="20dp"
+    android:backgroundTint="@color/white"
+    android:popupBackground="@drawable/background_interno_spinner"
+    app:layout_constraintTop_toBottomOf="@id/textoembalagem"/>
+<TextView
+    android:id="@+id/textonumerodevezesnodia"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="NÚMERO DE VEZES NO DIA"
+    android:textColor="@color/white"
+    android:textSize="20sp"
+    app:layout_constraintLeft_toLeftOf="@id/textoembalagem"
+    android:layout_marginTop="10dp"
+    app:layout_constraintTop_toBottomOf="@id/spinnerembalagemmedicamento"/>
+        <Spinner
+            android:id="@+id/spinnernumerodevezesnodia"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textonumerodevezesnodia"
+            android:layout_marginLeft="20dp"
+            android:popupBackground="@drawable/background_interno_spinner"
+            android:backgroundTint="@color/white"/>
+<TextView
+    android:id="@+id/textohorainicial"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="20sp"
+    android:textColor="@color/white"
+    android:text="HORA INICIAL:"
+    app:layout_constraintLeft_toLeftOf="@id/textonumerodevezesnodia"
+    app:layout_constraintTop_toBottomOf="@id/spinnernumerodevezesnodia"
+   android:layout_marginTop="10dp"
+    />
+<EditText
+    android:id="@+id/caixamedhorainicial"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:inputType="number"
+    app:layout_constraintLeft_toLeftOf="@id/textohorainicial"
+    android:layout_marginTop="5dp"
+    android:paddingStart="12dp"
+    android:textColor="@color/black"
+    android:paddingEnd="0dp"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:background="@drawable/background_caixa"
+    app:layout_constraintTop_toBottomOf="@id/textohorainicial"/>
+
+        <TextView
+            android:id="@+id/textoqntdadosagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="QTD. DA DOSAGEM"
+            app:layout_constraintTop_toBottomOf="@id/caixamedhorainicial"
+            app:layout_constraintLeft_toLeftOf="@id/textohorainicial"
+            android:layout_marginTop="5dp"/>
+
+        <EditText
+            android:id="@+id/caixamedqntdadosagem"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="@drawable/background_caixa"
+            android:ems="5"
+            android:maxLength="4"
+            android:textColor="@color/black"
+            android:inputType="number"
+            android:paddingStart="12dp"
+            android:paddingEnd="0dp"
+           app:layout_constraintLeft_toLeftOf="@id/textoqntdadosagem"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/textoqntdadosagem"
+            />
+
+
+    <TextView
+        android:id="@+id/textounidadedosagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="UNIDADE"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/caixamedqntdadosagem"/>
+
+        <Spinner
+            android:id="@+id/spinnerdosagem"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/white"
+            android:popupBackground="@drawable/background_interno_spinner"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textounidadedosagem" />
+<androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/btnSaveMed"
+    android:layout_width="120dp"
+    android:layout_height="wrap_content"
+    android:text="Salvar"
+    android:textSize="20sp"
+    android:textColor="@color/white"
+    android:background="@drawable/background_botao"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/spinnerdosagem"
+    android:layout_marginTop="32dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancelMed"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="Cancelar"
+            app:layout_constraintTop_toBottomOf="@id/btnSaveMed"
+            android:background="@drawable/background_botao"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDelMed"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/btnCancelMed"
+            android:text="Deletar"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="@drawable/background_botao"
+            android:layout_marginTop="10dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

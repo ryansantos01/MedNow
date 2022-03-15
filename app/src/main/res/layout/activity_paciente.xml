@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_telaprincipal"
+    tools:context=".Paciente_Activity"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textcpf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="CPF"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@+id/textrg"
+            app:layout_constraintTop_toBottomOf="@+id/caixarg" />
+
+        <EditText
+            android:id="@+id/caixarg"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="48dp"
+            android:hint="XX.XXX.XXX-X"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_caixa"
+            android:ems="10"
+            android:maxLength="9"
+            android:inputType="date"
+            android:textColor="@color/black"
+            android:paddingStart="12dp"
+            android:paddingEnd="0dp"
+            android:textColorHint="#4D4C4C"
+            app:layout_constraintStart_toStartOf="@+id/textrg"
+            app:layout_constraintTop_toBottomOf="@+id/textrg" />
+
+        <EditText
+            android:id="@+id/caixacpf"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_caixa"
+            android:ems="10"
+            android:textColor="@color/black"
+            android:paddingStart="12dp"
+            android:paddingEnd="0dp"
+            android:hint="ex: XXX.XXX.XXX-XX"
+            android:inputType="date"
+            android:textColorHint="#4D4C4C"
+            app:layout_constraintStart_toStartOf="@+id/textcpf"
+            app:layout_constraintTop_toBottomOf="@+id/textcpf" />
+
+        <Spinner
+            android:id="@+id/spinnerestadocivil"
+            android:backgroundTint="@color/white"
+            android:popupBackground="@drawable/background_interno_spinner"
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textestadocivil" />
+
+        <TextView
+            android:id="@+id/textrg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="RG"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@+id/textestadocivil"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerestadocivil" />
+
+        <TextView
+            android:id="@+id/textestadocivil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="ESTADO CIVIL"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@+id/texttelefone"
+            app:layout_constraintTop_toBottomOf="@+id/caixatelefone" />
+
+        <EditText
+            android:id="@+id/caixatelefone"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="48dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_caixa"
+            android:ems="10"
+            android:paddingStart="12dp"
+            android:paddingEnd="0dp"
+            android:hint="ex: (XX)XXXXX-XXXX"
+            android:inputType="date"
+            android:textColorHint="#4D4C4C"
+            app:layout_constraintStart_toStartOf="@+id/texttelefone"
+            app:layout_constraintTop_toBottomOf="@+id/texttelefone" />
+
+        <TextView
+            android:id="@+id/texttelefone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TELEFONE"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@+id/textplanodesaude"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/spinnerplanodesaude"/>
+
+        <TextView
+            android:id="@+id/textplanodesaude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="PLANO DE SAÚDE"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@+id/textestado"
+            app:layout_constraintTop_toBottomOf="@+id/caixacep" />
+
+        <TextView
+            android:id="@+id/textestado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="ESTADO"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@+id/textcidade"
+            app:layout_constraintTop_toBottomOf="@+id/caixacidade" />
+
+        <TextView
+            android:id="@+id/textcidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="CIDADE"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@+id/textendereco"
+            app:layout_constraintTop_toBottomOf="@+id/caixacomplemento" />
+
+        <EditText
+            android:id="@+id/caixaendereco"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_caixa"
+            android:ems="10"
+            android:paddingStart="12dp"
+            android:textColor="@color/black"
+            android:paddingEnd="0dp"
+            android:hint="ex: Rua dos Capimbais"
+            android:textColorHint="#4D4C4C"
+            app:layout_constraintStart_toStartOf="@+id/textendereco"
+            app:layout_constraintTop_toBottomOf="@+id/textendereco" />
+
+        <TextView
+            android:id="@+id/textcomplemento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="COMPLEMENTO"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@+id/textendereco"
+            app:layout_constraintTop_toBottomOf="@id/caixanumerodaresidencia" />
+        <EditText
+            android:id="@+id/caixacomplemento"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_caixa"
+            android:ems="10"
+            android:textColor="@color/black"
+            android:paddingStart="12dp"
+            android:paddingEnd="0dp"
+            android:hint="ex: Pizzaria"
+            android:textColorHint="#4D4C4C"
+            app:layout_constraintLeft_toLeftOf="@id/textcomplemento"
+            app:layout_constraintTop_toBottomOf="@+id/textcomplemento" />
+        <EditText
+            android:id="@+id/caixanumerodaresidencia"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="48dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_caixa"
+            android:ems="10"
+            android:paddingStart="12dp"
+            android:paddingEnd="0dp"
+            android:hint="ex: 32"
+            android:textColorHint="#4D4C4C"
+            android:inputType="date"
+            app:layout_constraintStart_toStartOf="@id/textnumerodaresidencia"
+            app:layout_constraintTop_toBottomOf="@+id/textnumerodaresidencia" />
+        <TextView
+            android:id="@+id/textnumerodaresidencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NÚMERO DA RESIDÊNCIA"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="@id/textendereco"
+            app:layout_constraintTop_toBottomOf="@+id/caixaendereco"
+            android:layout_marginTop="5dp"/>
+        <EditText
+            android:id="@+id/caixacidade"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_caixa"
+            android:ems="10"
+            android:paddingStart="12dp"
+            android:textColor="@color/black"
+            android:paddingEnd="0dp"
+            android:hint="ex: São Paulo"
+            android:textColorHint="#4D4C4C"
+            app:layout_constraintStart_toStartOf="@+id/textcidade"
+            app:layout_constraintTop_toBottomOf="@+id/textcidade" />
+
+        <TextView
+            android:id="@+id/textendereco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="ENDEREÇO"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textsexo"
+            app:layout_constraintTop_toBottomOf="@+id/spinnersexo" />
+
+        <TextView
+            android:id="@+id/textsexo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEXO"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@id/textdatadenascimento"
+            app:layout_constraintTop_toBottomOf="@+id/etBirth"/>
+        <Spinner
+            android:id="@+id/spinnersexo"
+            android:backgroundTint="@color/white"
+            android:popupBackground="@drawable/background_interno_spinner"
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textsexo" />
+        <TextView
+            android:id="@+id/textdatadenascimento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="DATA DE NASCIMENTO"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textnomecompleto"
+            app:layout_constraintTop_toBottomOf="@+id/caixanomecompleto" />
+
+        <EditText
+            android:id="@+id/etBirth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="XX/XX/XXXX"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textdatadenascimento"
+            android:layout_marginTop="20dp"
+            android:inputType="date"/>
+
+        <TextView
+            android:id="@+id/textmednow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="MED NOW"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textcadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Cadastro"
+            android:textColor="@color/Cor_Cadastro"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textmednow" />
+
+        <TextView
+            android:id="@+id/textidentificacaopessoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:text="Identificação Pessoal"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textcadastro" />
+
+        <TextView
+            android:id="@+id/textnomecompleto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="NOME COMPLETO"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textidentificacaopessoal"
+            app:layout_constraintTop_toBottomOf="@+id/textidentificacaopessoal" />
+
+
+        <EditText
+            android:id="@+id/caixanomecompleto"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/background_caixa"
+            android:ems="10"
+            android:hint="ex: Carla da Silva Amaral"
+            android:paddingStart="12dp"
+            android:paddingEnd="0dp"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textnomecompleto" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/caixacpf"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="@drawable/background_botao"
+            android:layout_marginTop="10dp"
+            android:text="Salvar"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDel"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/btnCancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="@drawable/background_botao"
+            android:layout_marginTop="10dp"
+            android:text="Deletar"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/btnSave"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/background_botao"
+            android:text="Cancelar"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerestado"
+            android:backgroundTint="@color/white"
+            android:popupBackground="@drawable/background_interno_spinner"
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textestado" />
+        <Spinner
+            android:id="@+id/spinnerplanodesaude"
+            android:backgroundTint="@color/white"
+            android:popupBackground="@drawable/background_interno_spinner"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textplanodesaude" />
+        <EditText
+            android:id="@+id/caixacep"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="48dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_caixa"
+            android:ems="10"
+            android:paddingStart="12dp"
+            android:paddingEnd="0dp"
+            android:hint="ex: XXXXX-XXX"
+            android:inputType="date"
+            android:textColorHint="#4D4C4C"
+            app:layout_constraintLeft_toLeftOf="@+id/textestado"
+            app:layout_constraintTop_toBottomOf="@+id/textcep" />
+        <TextView
+            android:id="@+id/textcep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/textestado"
+            app:layout_constraintTop_toBottomOf="@id/spinnerestado"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="CEP" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
